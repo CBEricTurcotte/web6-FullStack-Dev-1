@@ -22,5 +22,4 @@ Make sure to create a .env file.  You'll need to setup your credentials:
 </ul>
 
 ////////////////////////////////////////////////# -web6-FullStack-Dev-1
-# -web6-FullStack-Dev-1
-# web6-FullStack-Dev-1
+
