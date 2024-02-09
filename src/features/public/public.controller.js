@@ -1,6 +1,7 @@
 const Data = require('../../shared/resources/data');
+const Calculation = require('../../shared/resources/calculation'); // Import Calculation module
 
-const contactUs = (req,res) => {
+const contactUs = (req, res) => {
   const firstName = req.body.first_name;
   const lastName = req.body.last_name;
   const message = req.body.message;
@@ -11,64 +12,32 @@ const contactUs = (req,res) => {
   res.send(responseMessage);
 };
 
-const calculateResidentialQuote = (req,res) => {
-  // define constants
+const calculateResidentialQuote = (req, res) => {
+  const buildingType = req.params.buildingType.toLowerCase();
   const apts = +req.query.apts;
   const floors = +req.query.floors;
+  const maxOccupancy = +req.query.maxOccupancy;
+  const elevators = +req.query.elevators;
   const tier = req.query.tier.toLowerCase();
+  let numElevators, totalCost;
 
-  // validate request object
-  if(!Object.keys(Data.unitPrices).includes(tier)){
-    res.status(400);
-    res.send(`Error: invalid tier`);
-    return;
-  }
-  
-  if(isNaN(floors) || isNaN(apts)){
-    res.status(400);
-    res.send(`Error: apts and floors must be specified as numbers`);
-    return;
-  }
-
-  if(!Number.isInteger(floors) || !Number.isInteger(apts)){
-    res.status(400);
-    res.send(`Error: apts and floors must be integers`);
-    return;
+  if (buildingType === 'residential') {
+    numElevators = Calculation.calcResidentialElev(floors, apts);
+    totalCost = Calculation.calcInstallFee(numElevators, tier);
+  } else if (buildingType === 'commercial') {
+    numElevators = Calculation.calcCommercialElev(floors, maxOccupancy);
+    totalCost = Calculation.calcInstallFee(numElevators, tier);
+  } else if (buildingType === 'industrial') {
+    numElevators = Calculation.calcIndustrialElev(elevators);
+    totalCost = Calculation.calcInstallFee(numElevators, tier);
+  } else {
+    return res.status(400).send({ error: 'Invalid or Missing building type' });
   }
 
-  if(floors < 1 || apts < 1){
-    res.status(400);
-    res.send(`apts and floors must be greater than zero`);
-    return;
-  }
-
-  // business logic
-  const numElevators = calcResidentialElev(floors,apts);
-  const totalCost = calcInstallFee(numElevators,tier);
-
-  // format response
-  res.send({
-    elevators_required:numElevators,
-    cost: totalCost
+  res.status(200).send({
+    elevators_required: numElevators,
+    cost: Data.formatter.format(totalCost) // Assuming Data is defined elsewhere
   });
 };
 
-const calcResidentialElev = (numFloors, numApts) => {
-  const elevatorsRequired = Math.ceil(numApts / numFloors / 6)*Math.ceil(numFloors / 20);
-  return elevatorsRequired;
-};
-
-const calcCommercialElev = (numFloors, maxOccupancy) => {
-  const elevatorsRequired = Math.ceil((maxOccupancy * numFloors) / 200)*Math.ceil(numFloors / 10);
-  const freighElevatorsRequired = Math.ceil(numFloors / 10);
-  return freighElevatorsRequired + elevatorsRequired;
-};
-
-const calcInstallFee = (numElvs, tier) => {
-  const unitPrice = Data.unitPrices[tier];
-  const installPercentFees = Data.installPercentFees[tier];
-  const total = numElvs * unitPrice * installPercentFees;
-  return total;
-};
-
-module.exports = {contactUs,calculateResidentialQuote};
+module.exports = { contactUs, calculateResidentialQuote };
