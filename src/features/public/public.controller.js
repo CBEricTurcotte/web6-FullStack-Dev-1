@@ -13,30 +13,36 @@ const contactUs = (req, res) => {
 };
 
 const calculateResidentialQuote = (req, res) => {
-  const buildingType = req.params.buildingType.toLowerCase();
+  const buildingType = req.params.buildingType;
   const apts = +req.query.apts;
   const floors = +req.query.floors;
   const maxOccupancy = +req.query.maxOccupancy;
   const elevators = +req.query.elevators;
-  const tier = req.query.tier.toLowerCase();
+  const tier = req.query.tier;
+
+  // Check if required parameters are provided
+  if (!buildingType || !apts || !floors || !tier) {
+    return res.status(400).send({ error: 'Missing required parameters' });
+  }
+
   let numElevators, totalCost;
 
-  if (buildingType === 'residential') {
+  if (buildingType.toLowerCase() === 'residential') {
     numElevators = Calculation.calcResidentialElev(floors, apts);
     totalCost = Calculation.calcInstallFee(numElevators, tier);
-  } else if (buildingType === 'commercial') {
+  } else if (buildingType.toLowerCase() === 'commercial') {
     numElevators = Calculation.calcCommercialElev(floors, maxOccupancy);
     totalCost = Calculation.calcInstallFee(numElevators, tier);
-  } else if (buildingType === 'industrial') {
+  } else if (buildingType.toLowerCase() === 'industrial') {
     numElevators = Calculation.calcIndustrialElev(elevators);
     totalCost = Calculation.calcInstallFee(numElevators, tier);
   } else {
-    return res.status(400).send({ error: 'Invalid or Missing building type' });
+    return res.status(400).send({ error: 'Invalid building type' });
   }
 
   res.status(200).send({
     elevators_required: numElevators,
-    cost: Data.formatter.format(totalCost) // Assuming Data is defined elsewhere
+    cost: Data.formatter.format(totalCost)
   });
 };
 
