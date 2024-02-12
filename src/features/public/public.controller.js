@@ -1,15 +1,34 @@
 const Data = require('../../shared/resources/data');
 const Calculation = require('../../shared/resources/calculation'); // Import Calculation module
+const Contact = require('../../shared/db/mongodb/schemas/contact.Schema'); // Import the Contact model
 
 const contactUs = (req, res) => {
-  const firstName = req.body.first_name;
-  const lastName = req.body.last_name;
-  const message = req.body.message;
+  const { first_name, last_name, email, phone, company_name, project_name, project_desc, department, message } = req.body;
 
-  const responseMessage = `Message received from ${firstName} ${lastName} ${message}`;
+  // Create a new Contact document
+  const newContact = new Contact({
+    fullname: `${first_name} ${last_name}`,
+    email,
+    phone,
+    company_name,
+    project_name,
+    project_desc,
+    department,
+    message
+  });
 
-  console.log(responseMessage);
-  res.send(responseMessage);
+  // Save the new contact to MongoDB
+  newContact.save()
+    .then(savedContact => {
+      console.log('Contact saved:', savedContact);
+      const responseMessage = `Message received from ${first_name} ${last_name}: ${message}`;
+      console.log(responseMessage);
+      res.status(200).send('Contact saved successfully');
+    })
+    .catch(error => {
+      console.error('Error saving contact:', error);
+      res.status(500).send('Error saving contact');
+    });
 };
 
 const calculateResidentialQuote = (req, res) => {
