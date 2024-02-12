@@ -6,7 +6,7 @@ const contactUs = (req, res) => {
   const lastName = req.body.last_name;
   const message = req.body.message;
 
-  const responseMessage = `Message received from ${firstName} ${lastName}`;
+  const responseMessage = `Message received from ${firstName} ${lastName} ${message}`;
 
   console.log(responseMessage);
   res.send(responseMessage);

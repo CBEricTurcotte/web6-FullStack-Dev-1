@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="validator install">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment=".gitignore">
+      <change afterPath="$PROJECT_DIR$/src/shared/db/mongodb/schemas/contact.Schema.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/public/public.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/public/public.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/resources/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/resources/data.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +85,7 @@
       <updated>1707417158381</updated>
       <workItem from="1707417162546" duration="5069000" />
       <workItem from="1707484705374" duration="4630000" />
-      <workItem from="1707744883772" duration="373000" />
+      <workItem from="1707744883772" duration="2422000" />
     </task>
     <task id="LOCAL-00001" summary="initial set up +calculation.js">
       <created>1707486095448</created>
@@ -113,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707745124392</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=".gitignore">
+      <created>1707745314821</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707745314821</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +143,7 @@
     <MESSAGE value="initial set up +calculation.js" />
     <MESSAGE value="cal method" />
     <MESSAGE value="validator install" />
-    <option name="LAST_COMMIT_MESSAGE" value="validator install" />
+    <MESSAGE value=".gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value=".gitignore" />
   </component>
 </project>
