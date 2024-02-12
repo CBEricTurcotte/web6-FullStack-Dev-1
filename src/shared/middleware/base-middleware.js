@@ -1,6 +1,8 @@
 require('dotenv').config();
 const Express = require('express');
+const validator = require('validator')
 const app = Express();
+app.use(Express.json())
 
 const adminRoutes = [
   '/email-list',
@@ -38,5 +40,17 @@ const checkAuthToken = (req,res,next) => {
   }
   next();
 };
+const myValidator = (req, res, next) => {
+  const { email, phone } = req.body;
+  const { buildingType } = req.params;
+  const { region } = req.query;
 
-module.exports = {registerBaseMiddleWare};
+  if (email) {if (!validator.isEmail(email)) return res.status(400).send('Invalid Email');}
+  if (phone) {if (!validator.isMobilePhone(phone)) return res.status(400).send('Invalid Phone Number');}
+  if (buildingType) {if (!validator.isIn(buildingType, ['residential', 'commercial', 'industrial'])) return res.status(400).send('Wrong Building Type');}
+  if (region) {if (!validator.isIn(region.toLowerCase(), ['north', 'east', 'south', 'west'])) {return res.status(400).send('Invalid region');}}
+
+  next();
+}
+
+module.exports = {registerBaseMiddleWare, myValidator};
