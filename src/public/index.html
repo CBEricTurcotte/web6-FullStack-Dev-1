@@ -781,145 +781,147 @@
 			<!-- /CLIENTS -->
 
 
-			<!-- CONTACT -->
-			<section id="contact">
-				<div class="container">
-					<div class="row">
-						<!-- FORM -->
-						<div class="col-md-8 col-sm-8">
+            <!-- CONTACT -->
+            <section id="contact">
+                <div class="container">
+                    <div class="row">
+                        <!-- FORM -->
+                        <div class="col-md-8 col-sm-8">
 
-							<header class="text-center mb-60">
-								<h2>Contact Us Today</h2>
-								<hr />
-							</header>
+                            <header class="text-center mb-60">
+                                <h2>Contact Us Today</h2>
+                                <hr />
+                            </header>
 
-							<!-- Alert Success -->
-							<div id="alert_success" class="alert alert-success mb-30">
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-								<strong>Thank You!</strong> Your message successfully sent!
-							</div>
+                            <!-- Alert Success -->
+                            <div id="alert_success" class="alert alert-success mb-30">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                <strong>Thank You!</strong> Your message successfully sent!
+                            </div>
 
-							<!-- Alert Failed -->
-							<div id="alert_failed" class="alert alert-danger mb-30">
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-								<strong>[SMTP] Error!</strong> Internal server error!
-							</div>
+                            <!-- Alert Failed -->
+                            <div id="alert_failed" class="alert alert-danger mb-30">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                <strong>[SMTP] Error!</strong> Internal server error!
+                            </div>
 
-							<!-- Alert Mandatory -->
-							<div id="alert_mandatory" class="alert alert-danger mb-30">
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-								<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
-							</div>
+                            <!-- Alert Mandatory -->
+                            <div id="alert_mandatory" class="alert alert-danger mb-30">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                <strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+                            </div>
 
 
-							<form id="contact-form">
-								<fieldset>
-									<input type="hidden" name="action" value="contact_send" />
+                            <form id="contact-form">
+                                <fieldset>
+                                    <input type="hidden" name="action" value="contact_send" />
 
-									<div class="row">
-											<div class="col-md-4">
-												<label for="name">Full Name *</label>
-												<input id="name" required type="text" value="" class="form-control" name="contact[name][required]">
-											</div>
-											<div class="col-md-4">
-												<label for="email">E-mail Address *</label>
-												<input id="email" required type="email" value="" class="form-control" name="contact[email][required]">
-											</div>
-											<div class="col-md-4">
-												<label for="phone">Phone</label>
-												<input id="phone" type="text" value="" class="form-control" name="contact[phone]">
-											</div>
-									</div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="fullname">Full Name *</label>
+                                            <input id="fullname" type="text" value="" class="form-control" name="fullname" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="email">E-mail Address *</label>
+                                            <input id="email" type="email" value="" class="form-control" name="email" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="phone">Phone *</label>
+                                            <input id="phone" type="text" value="" class="form-control" name="phone" required>
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label for="company_name">Company Name *</label>
-                                            <input id="name" required type="text" value="" class="form-control" name="contact[name][required]">
+                                            <input id="company_name"  type="text" value="" class="form-control" name="company_name" required>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="project_name">Project Name *</label>
-                                            <input id="project_name" required type="text" value="" class="form-control" name="contact[name][required]">
+                                            <input id="project_name"  type="text" value="" class="form-control" name="project_name" required>
                                         </div>
                                     </div>
-									<div class="row">
-											<div class="col-md-6">
-                                                <label for="project_description">Project Description *</label>
-												<input id="project_description" required type="text" value="" class="form-control" name="contact[subject][required]">
-											</div>
-											<div class="col-md-6">
-												<label for="department">Department</label>
-												<select id="department" class="form-control pointer" name="contact[department]">
-													<option value="">--- Select ---</option>
-													<option value="Marketing">Commercial</option>
-													<option value="Webdesign">Residential</option>
-												</select>
-											</div>
-									</div>
-									<div class="row">
-											<div class="col-md-12">
-												<label for="message">Message *</label>
-												<textarea id="message" required maxlength="10000" rows="8" class="form-control" name="contact[message]"></textarea>
-											</div>
-									</div>
-									<div class="row">
-											<div class="col-md-12">
-												<label for="attachment">File Attachment</label>
-												<!-- custom file upload -->
-												<input id="attachment" class="custom-file-upload" type="file" name="contact[attachment]"  data-btn-text="Select a File" />
-												<small class="text-muted block">
-                                                    Max file size: 10Mb (zip/pdf/jpg/png)
-                                                </small>
-											</div>
-									</div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="project_desc">Project Description *</label>
+                                            <input id="project_desc"  type="text" value="" class="form-control" name="project_desc" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="department">Department *</label>
+                                            <select id="department" class="form-control pointer" name="department" required>
+                                                <option value="">--- Select ---</option>
+                                                <option value="residential">Residential</option>
+                                                <option value="commercial">Commercial</option>
+                                                <option value="industrial">Industrial</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label for="message">Message *</label>
+                                            <textarea id="message"  maxlength="10000" rows="8" class="form-control" name="message" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label for="attachment">File Attachment</label>
+                                            <input id="attachment" class="custom-file-upload" type="file" name="attachment"  data-btn-text="Select a File" accept="image/png, image/gif, image/jpeg, image/jpg"/>
+                                            <small class="text-muted block">
+                                                Max file size: 10Mb (png/gif/jpeg/jpg)
+                                            </small>
+                                        </div>
+                                    </div>
+                                </fieldset>
 
-								</fieldset>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-check"></i> SEND MESSAGE</button>
+                                    </div>
+                                </div>
+                            </form>
 
-								<div class="row">
-									<div class="col-md-12">
-										<button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-check"></i> SEND MESSAGE</button>
-									</div>
-								</div>
-							</form>
-
-						</div>
-						<!-- /FORM -->
+                        </div>
+                        <!-- /FORM -->
 
 
-						<!-- INFO -->
-						<div class="col-md-4 col-sm-4" style="padding-left: 5%">
+                        <!-- INFO -->
+                        <div class="col-md-4 col-sm-4" style="padding-left: 5%">
 
-							<header class="text-center mb-60">
-								<h2>Visit Us</h2>
-								<hr />
-							</header>
-							
-							<img class="img-fluid" src="assets/images/rocketElevators/map.jpg"/>
-						
-							<p style="padding-top: 10%">
-								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 4468 Wellington St Suite 204, Verdun, Quebec H4G 1W5</span>
-								<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:418-555-1234">(418) 555-1234</a></span>
-								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:info@codeboxx.biz">info@codeboxx.biz</a></span>
-								<span class="block"><strong>
-									<i class="fa fa-clock-o" aria-hidden="true"></i> 
+                            <header class="text-center mb-60">
+                                <h2>Visit Us</h2>
+                                <hr />
+                            </header>
+
+                            <img class="img-fluid" src="assets/images/rocketElevators/map.jpg" alt="" />
+
+                            <p style="padding-top: 10%">
+                                <span id="biz_address" class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 4468 Wellington St Suite 204, Verdun, Quebec H4G 1W5</span>
+                                <span id="biz_phone" class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:418-555-1234">(418) 555-1234</a></span>
+                                <span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:info@codeboxx.biz">info@codeboxx.biz</a></span>
+                                <span class="block">
+									<strong>
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
 									Business Hours:
-								</strong></span>
-								<span class="block"> 
-									<ul>
-										<li>Monday: 9:00 - 17:00</li>
-										<li>Tuesday: 9:00 - 17:00</li>
-										<li>Wednesday: 9:00 - 17:00</li>
-										<li>Thursday: 9:00 - 17:00</li>
-										<li>Friday: 9:00 - 17:00</li>
-										<li>Saturday: 12:00 - 17:00</li>
-									</ul>
+									</strong>
 								</span>
-							</p>
-						</div>
-						<!-- /INFO -->
+                                <span class="block">
+                            <ul>
+                                <li>Monday: 9:00 - 17:00</li>
+                                <li>Tuesday: 9:00 - 17:00</li>
+                                <li>Wednesday: 9:00 - 17:00</li>
+                                <li>Thursday: 9:00 - 17:00</li>
+                                <li>Friday: 9:00 - 17:00</li>
+                                <li id="biz_saturday">Saturday: 12:00 - 17:00</li>
+                            </ul>
+                            </span>
+                            </p>
+                        </div>
+                        <!-- /INFO -->
 
-					</div>
-				</div>
-			</section>
-			<!-- /CONTACT -->
+                    </div>
+                </div>
+            </section>
+            <!-- /CONTACT -->
+
 
 
 			<!-- MODAL -->
