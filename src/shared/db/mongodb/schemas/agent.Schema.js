@@ -1,48 +1,53 @@
 const mongoose = require('mongoose')
 
 const AgentSchema = new mongoose.Schema({
-    first_name: {
-        type: String,
-        trim: true,
-        required: true
+  first_name: {
+    type: String,
+    trim: true,
+    required: true
+  },
+  last_name: {
+    type: String,
+    trim: true,
+    required: true
+  },
+  email: {
+    type: String,
+    trim: true,
+    required: true,
+    unique: true,
+  },
+  region: {
+    type: String,
+    enum: {
+      values: ['north', 'south', 'east', 'west'],
+      message: '{VALUE} is not supported'
     },
-    last_name: {
-        type: String,
-        trim: true,
-        required: true
+    required: true
+  },
+  rating: {
+    type: Number,
+    min: 0,
+    max: 100
+  },
+  fee: {
+    type: Number,
+    min: 0
+  },
+  sales: {
+    type: Number,
+    min: 0,
+    default: 0
+  },
+  position: [{
+    type: String,
+    enum: {
+      values: ['agent', 'manager'],
+      message: '{VALUE} is not supported'
     },
-    email: { 
-        type: String,
-        trim: true,
-        required: true,
-        // unique: true
-    },
-    region: {
-        type: String,
-        enum:{
-            values:['north', 'south', 'east', 'west'],
-            message: '{VALUE} is not supported'
-        },
-        required: true
-
-    },
-    rating: {
-        type: Number,
-        min: 0,
-        max: 100
-    },
-    fee: {
-        type: Number,
-        min: 0
-    },
-    sales: {
-        type: Number,
-        min: 0,
-        default: 0
-    }
-}, { timestamps: true })
-
-
+    default: 'agent'
+  }],
+}, { timestamps: true });
 
 
 module.exports = mongoose.model('Agent', AgentSchema)
