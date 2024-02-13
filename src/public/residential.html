@@ -19,7 +19,7 @@
 
     <!-- LAYER SLIDER -->
     <link href="assets/plugins/slider.layerslider/css/layerslider.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/slider.revolution/css/extra-layers.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
     <link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
 
     <!-- THEME CSS -->
@@ -42,7 +42,7 @@
 
 <body class="smoothscroll enable-animation">
 
-<!-- WRAPPER -->
+<!-- wrapper -->
 <div id="wrapper">
 
     <!-- TOP NAVIGATION -->
@@ -113,6 +113,8 @@
 
             </div>
         </header>
+        <!-- TOP NAV -->
+
     </div>
     <!-- / TOP NAVIGATION -->
 
@@ -125,12 +127,13 @@
             <ol class="breadcrumb">
                 <li><a id="rockets-home" href="index.html">Home</a></li>
                 <li><a href="index.html#services">Services</a></li>
-                <li class="active">Residential</li>
+                <li class="active">Residential</p></li>
             </ol>
             <!-- /breadcrumbs -->
         </div>
     </section>
-    <!-- /PAGE HEADER BREADCRUMBS -->
+    <!-- /PAGE HEADER BREADCRUMS -->
+
 
     <!-- LAYER SLIDER -->
     <section>
@@ -186,7 +189,7 @@
 								delayin:500;
 								offsetxout:-50;
 								durationout:1000;"
-                       style="top:275px;left:50%;font-weight: bold; background: #A94545; height:40px; p-right:10px;p-left:10px;font-size:30px;line-height:37px;color:#fff;white-space: nowrap; padding:10px;">
+                       style="top:275px;left:50%;font-weight: bold; background: white; background: #A94545; height:40px; p-right:10px;p-left:10px;font-size:30px;line-height:37px;color:#fff;white-space: nowrap; padding:10px;">
                         Residential Buildings
                     </p>
                     <p class="ls-l" data-ls="
@@ -220,7 +223,7 @@
 								delayin:500;
 								offsetxout:-50;
 								durationout:1000;"
-                       style="top:84%;left:35%;font-weight: bold; background: #A94545; height:40px; p-right:10px;p-left:10px;font-size:30px;line-height:37px;color:#fff;white-space: nowrap; padding:5px;">
+                       style="top:84%;left:35%;font-weight: bold; background: white; background: #A94545; height:40px; p-right:10px;p-left:10px;font-size:30px;line-height:37px;color:#fff;white-space: nowrap; padding:5px;">
                         Apartments
                     </p>
                 </div>
@@ -244,7 +247,7 @@
 								delayin:500;
 								offsetxout:-50;
 								durationout:1000;"
-                       style="top:84%;left:35%;font-weight: bold; background: #A94545; height:40px; p-right:10px;p-left:10px;font-size:30px;line-height:37px;color:#fff;white-space: nowrap; padding:5px;">
+                       style="top:84%;left:35%;font-weight: bold; background: white; background: #A94545; height:40px; p-right:10px;p-left:10px;font-size:30px;line-height:37px;color:#fff;white-space: nowrap; padding:5px;">
                         Apartments
                     </p>
                 </div>
@@ -268,8 +271,8 @@
 								delayin:500;
 								offsetxout:-50;
 								durationout:1000;"
-                       style="top:84%;left:35%;font-weight: bold; background: #A94545; height:40px; p-right:10px;p-left:10px;font-size:30px;line-height:37px;color:#fff;white-space: nowrap; padding:5px;">
-                        Residential
+                       style="top:84%;left:35%;font-weight: bold; background: white; background: #A94545; height:40px; p-right:10px;p-left:10px;font-size:30px;line-height:37px;color:#fff;white-space: nowrap; padding:5px;">
+                        Residentials
                     </p>
                 </div>
 
@@ -292,14 +295,14 @@
 								delayin:500;
 								offsetxout:-50;
 								durationout:1000;"
-                       style="top:84%;left:35%;font-weight: bold; background: #A94545; height:40px; p-right:10px;p-left:10px;font-size:30px;line-height:37px;color:#fff;white-space: nowrap; padding:5px;">
+                       style="top:84%;left:35%;font-weight: bold; background: white; background: #A94545; height:40px; p-right:10px;p-left:10px;font-size:30px;line-height:37px;color:#fff;white-space: nowrap; padding:5px;">
                         Centers
                     </p>
                 </div>
             </div>
 
             <script>
-              const layer_options = {
+              var layer_options = {
                 type: 					'responsive',
                 skin: 					'outline',
                 skinsPath: 				'assets/plugins/slider.layerslider/skins/',
@@ -311,22 +314,21 @@
     </section>
     <!-- /LAYER SLIDER -->
 
+
     <!-- AGENT TABLE -->
-    <section id="agents-list">
+    <section id="agents_list">
         <div class="container">
             <div class="heading-title heading-dotted text-center">
                 <h2 class>Top Rating Agent</h2>
             </div>
             <table class="table border border-danger">
-                <thead id="table-head-agent">
+                <thead id="agent_table_head">
                 <tr style="color: white">
                     <th scope="col">#</th>
-                    <th scope="col"><button id="first_name" class="dropdown-toggle">First Name</button></th>
-                    <th scope="col"><button id="last_name" class="dropdown-toggle">Last Name</button></th>
-                    <th scope="col"><button id="fee" class="dropdown-toggle">Fee</button></th>
-                    <th scope="col"><button id="rating" class="dropdown-toggle">Rating</button></th>
+                    <th scope="col"><button id="full_name">Full Name &#8593&#8595</button></th>
+                    <th scope="col"><button id="fee">Fee &#8593&#8595</button></th>
+                    <th scope="col"><button id="rating">Rating &#8593&#8595</button></th>
                     <th scope="col">
-                        <label for="regions"></label>
                         <select name="regions" id="regions" class="form-control pointer">
                             <option id="all" value="all">All Regions</option>
                             <option id="north" value="north">North</option>
@@ -337,21 +339,22 @@
                     </th>
                 </tr>
                 </thead>
-                <tbody id="agent-table-body"></tbody>
+                <tbody id="agent_table_body"></tbody>
             </table>
         </div>
     </section>
     <!-- /AGENT TABLE -->
 
+
     <!-- BUSINESS MODEL -->
     <section id="business-model">
 
         <div class="container">
-            <h2 class="m-0">What we deliver since 1976...</h2>
+            <h2 class="m-0">What we deliver since <span style="color: rgb(170, 69, 69)">1976</span>...</h2>
             <p>
                 ... and why we are
                 <span class="word-rotator" data-delay="2000">
-							<span class="items" style="text-align: center">
+							<span class="items" style="color: rgb(170, 69, 69); text-align: center">
 								<span>trusted</span>
 								<span>loved</span>
 							</span>
@@ -394,12 +397,14 @@
     </section>
     <!-- /BUSINESS MODEL -->
 
+
+
     <!-- PARALLAX -->
     <section class="parallax parallax-2" style="background-image: url('assets/images/rocketElevators/homeSlider1.jpeg');">
         <div class="overlay dark-7"></div>
         <div class="container text-center">
             <div class="text-center">
-                <h3>Contact us now & get <span class="countTo" data-speed="1000" style="color: #fff">15</span>% discount<br/> of your first purchase!</h3>
+                <h3>Contact us now & get <span class="countTo" data-speed="1000" style="color: #fff">15</span>% discount</br> of your first purchase!</h3>
                 <p class="font-lato fs-20">
                     * Offer valid until the Febuary 20th, 2022.
                 </p>
@@ -425,7 +430,7 @@
                                 </p>
                                 <div class="testimonial">
                                     <figure>
-                                        <img class="rounded" src="assets/images/rocketElevators/testimonial1.jpg" alt="testimonial1"/>
+                                        <img class="rounded" src="assets/images/rocketElevators/testi1.jpg"/>
                                     </figure>
                                     <cite>
                                         Hillary Clinton
@@ -443,7 +448,7 @@
                                 </p>
                                 <div class="testimonial">
                                     <figure>
-                                        <img class="rounded" src="assets/images/rocketElevators/testimonial2.jpg" alt="testimonial2"/>
+                                        <img class="rounded" src="assets/images/rocketElevators/testi2.jpg"/>
                                     </figure>
                                     <cite>
                                         Tony Stark
@@ -460,7 +465,7 @@
                                 </p>
                                 <div class="testimonial">
                                     <figure>
-                                        <img class="rounded" src="assets/images/rocketElevators/testimonial3.jpg" alt="testimonial3"/>
+                                        <img class="rounded" src="assets/images/rocketElevators/testi3.jpg"/>
                                     </figure>
                                     <cite>
                                         Mark Zuckerberg
@@ -518,12 +523,11 @@
                     <h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
                     <p>Subscribe to Our Newsletter to get Important News & Offers</p>
 
-                    <form id="subscribe-form">
+                    <form id="subscribe-form" onsubmit="showPopup()">
                         <div class="input-group">
 									<span class="input-group-addon">
 										<i class="fa fa-envelope"></i>
 									</span>
-                            <label for="email"></label>
                             <input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
                             <span class="input-group-btn">
 										<button class="btn btn-primary" type="submit">
@@ -547,7 +551,7 @@
     <!-- /FOOTER -->
 
 </div>
-<!-- /WRAPPER -->
+<!-- /wrapper -->
 
 
 <!-- SCROLL TO TOP -->
@@ -562,7 +566,7 @@
 </div><!-- /PRELOADER -->
 
 <!-- JAVASCRIPT FILES -->
-<script>const plugin_path = 'assets/plugins/';</script>
+<script>var plugin_path = 'assets/plugins/';</script>
 <script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
 <!-- LAYER SLIDER -->
