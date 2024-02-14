@@ -12,14 +12,18 @@ const getAllAgents = asyncWrapper( async (req,res) => {
   res.status(200).json({ data: agentsAlpha });
 });
 
-const getAgentsByRegion = asyncWrapper( async (req,res) => {
+const getAgentsByRegion = asyncWrapper(async (req, res) => {
   const regionSelected = req.query.region;
-  const agents = await Agent.find({ region: regionSelected.toLowerCase() });
-  if(agents.length === 0){
-    res.status(404).json({ msg: `No agents found in ${regionSelected}` })
-    return;
+  try {
+    const agents = await Agent.find({ region: regionSelected });
+    if (agents.length === 0) {
+      return res.status(404).json({ msg: `No agents found in ${regionSelected}` });
+    }
+    res.status(200).json({ agents });
+  } catch (error) {
+    console.error('Error fetching agents by region:', error);
+    res.status(500).json({ msg: 'Internal Server Error' });
   }
-  res.status(200).json({ agents });
 });
 
 const updateAgentInfo = asyncWrapper( async (req,res) => {
