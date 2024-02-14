@@ -16,21 +16,24 @@ const getRegion = asyncWrapper(async (req, res) => {
 });
 
 const getAllStars = asyncWrapper(async (req, res) => {
-  const northRegion = await Region.find({ region: 'north' });
-  const southRegion = await Region.find({ region: 'south' });
-  const eastRegion = await Region.find({ region: 'east' });
+  const north_region = await Region.find({ region: 'north' });
+  const south_region = await Region.find({ region: 'south' });
+  const east_region = await Region.find({ region: 'east' });
+  const west_region = await Region.find({ region: 'west' });
   res.status(200).json({
     region1: 'north',
-    topAgent_North: northRegion[0].top_agents[0],
+    topAgent_North: north_region[0].top_agents[0],
     region2: 'east',
-    topAgent_East: eastRegion[0].top_agents[0],
+    topAgent_East: east_region[0].top_agents[0],
     region3: 'south',
-    topAgent_South: southRegion[0].top_agents[0]
+    topAgent_South: south_region[0].top_agents[0],
+    region4: 'west',
+    topAgent_West: west_region[0].top_agents[0],
   });
 });
 
 module.exports = {
   createRegion,
   getRegion,
-  getAllStars,
+  getAllStars
 };
