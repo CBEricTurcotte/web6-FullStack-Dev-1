@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="Agent Table, remove toLowerCase" />
+    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="Agent Table, remove toLowerCase">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/assets/js/residential.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/assets/js/residential.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/residential.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/residential.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +64,7 @@
     &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JavaScript Debug.quote.html">
+  <component name="RunManager" selected="JavaScript Debug.residential.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Full-Stack-Development-1/src/public/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -72,9 +76,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.quote.html" />
         <item itemvalue="JavaScript Debug.residential.html" />
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.quote.html" />
       </list>
     </recent_temporary>
   </component>
@@ -93,7 +97,7 @@
       <workItem from="1707840895217" duration="916000" />
       <workItem from="1707843388019" duration="6470000" />
       <workItem from="1707917646554" duration="4432000" />
-      <workItem from="1707924024398" duration="4293000" />
+      <workItem from="1707924024398" duration="7110000" />
     </task>
     <task id="LOCAL-00001" summary="initial set up +calculation.js">
       <created>1707486095448</created>
@@ -200,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707930889365</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Agent Table, remove toLowerCase">
+      <created>1707932145294</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1707932145294</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
