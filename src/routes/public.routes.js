@@ -23,8 +23,16 @@ const validateBuildingType = (req, res, next) => {
 };
 
 const registerPublicRoutes = (app) => {
+  // Route for submitting contact information
   app.post('/contact', BaseMiddleware.myValidator, PublicController.contactUs);
-  app.get('/calc/:buildingType', validateBuildingType, BaseMiddleware.myValidator, PublicController.calculateQuote);
+
+  // Route for calculating a quote based on building type
+  app.get(
+    '/calc/:buildingType',
+    BaseMiddleware.myValidator, // Apply general validation middleware
+    validateBuildingType, // Validate building type parameter
+    PublicController.calculateQuote
+  );
 };
 
 module.exports = { registerPublicRoutes };
