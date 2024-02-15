@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="cypress test suite">
+    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="Calc test">
+      <change afterPath="$PROJECT_DIR$/cypress/plugins/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/public/public.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/public/public.controller.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +99,7 @@
       <workItem from="1707843388019" duration="6470000" />
       <workItem from="1707917646554" duration="4432000" />
       <workItem from="1707924024398" duration="12835000" />
-      <workItem from="1708001965981" duration="8865000" />
+      <workItem from="1708001965981" duration="13593000" />
     </task>
     <task id="LOCAL-00001" summary="initial set up +calculation.js">
       <created>1707486095448</created>
@@ -260,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708016825779</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Calc test">
+      <created>1708020388606</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1708020388606</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,6 +308,7 @@
     <MESSAGE value="pre-cypress commit" />
     <MESSAGE value="cypress install + library" />
     <MESSAGE value="cypress test suite" />
-    <option name="LAST_COMMIT_MESSAGE" value="cypress test suite" />
+    <MESSAGE value="Calc test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Calc test" />
   </component>
 </project>

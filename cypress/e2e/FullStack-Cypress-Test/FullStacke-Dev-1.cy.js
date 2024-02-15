@@ -1,4 +1,8 @@
 describe('FullStack Dev-1 Automated Grading', () => {
+  // beforeEach(() => {
+  //   // Before each test, delete contact data from MongoDB using the custom Cypress task
+  //   cy.task('deleteContactData');
+  // });
   it('Log on Local', () => {
     cy.visit('/')
   })
@@ -129,7 +133,28 @@ describe('FullStack Dev-1 Automated Grading', () => {
   ////////////////////////
 
   it('Contact Endpoint 1 - The endpoint has been update to accept all fields from the form', () => {
-    // Define valid query parameters for the residential building type
-  });
+    // Define form data
+    const formData = {
+      fullname: 'John Doe',
+      email: 'johndoe@example.com',
+      phone: '1234567890',
+      company_name: 'Example Company',
+      project_name: 'Example Project',
+      project_desc: 'This is an example project description.',
+      department: 'commercial',
+      message: 'This is a test message.'
+    };
 
-})
+    // Send a POST request to the /contact endpoint with form data
+    cy.request({
+      method: 'POST',
+      url: '/contact',
+      body: formData
+    }).then(response => {
+      // Assert that the response status is 200 (assuming success)
+      expect(response.status).to.equal(200);
+    });
+    // Delete the contact form data using the task
+    cy.task('deleteContactDataFromMongoDB');
+  });
+});
