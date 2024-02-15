@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="cypress install + library">
-      <change afterPath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" afterDir="false" />
+    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="cypress test suite">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/public.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/public.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +97,7 @@
       <workItem from="1707843388019" duration="6470000" />
       <workItem from="1707917646554" duration="4432000" />
       <workItem from="1707924024398" duration="12835000" />
-      <workItem from="1708001965981" duration="7065000" />
+      <workItem from="1708001965981" duration="8865000" />
     </task>
     <task id="LOCAL-00001" summary="initial set up +calculation.js">
       <created>1707486095448</created>
@@ -256,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708008208086</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="cypress test suite">
+      <created>1708016825779</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1708016825779</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +298,7 @@
     <MESSAGE value="gitignore" />
     <MESSAGE value="pre-cypress commit" />
     <MESSAGE value="cypress install + library" />
-    <option name="LAST_COMMIT_MESSAGE" value="cypress install + library" />
+    <MESSAGE value="cypress test suite" />
+    <option name="LAST_COMMIT_MESSAGE" value="cypress test suite" />
   </component>
 </project>
