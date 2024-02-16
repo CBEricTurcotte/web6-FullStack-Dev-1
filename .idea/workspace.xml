@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="delete contact task">
+    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="cypress test agent table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/plugins/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/plugins/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/db/mongodb/mongo-manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/db/mongodb/mongo-manager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/health/health.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/health/health.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/health/healthTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/health/healthTest.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +100,7 @@
       <workItem from="1707917646554" duration="4432000" />
       <workItem from="1707924024398" duration="12835000" />
       <workItem from="1708001965981" duration="17334000" />
-      <workItem from="1708085313093" duration="4913000" />
+      <workItem from="1708085313093" duration="6641000" />
     </task>
     <task id="LOCAL-00001" summary="initial set up +calculation.js">
       <created>1707486095448</created>
@@ -284,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708027396662</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="cypress test agent table">
+      <created>1708096166326</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1708096166326</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +332,7 @@
     <MESSAGE value="cypress test suite" />
     <MESSAGE value="Calc test" />
     <MESSAGE value="delete contact task" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete contact task" />
+    <MESSAGE value="cypress test agent table" />
+    <option name="LAST_COMMIT_MESSAGE" value="cypress test agent table" />
   </component>
 </project>

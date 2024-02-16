@@ -1,21 +1,17 @@
-const ResponseUtil = require('../../shared/utils/response-util').ResponseUtil;
 require('dotenv').config();
 const port = process.env.PORT || 3004;
+const envName = process.env.ENV_NAME || 'local';
 
-const helloWorld = async(req, res) => {
-  ResponseUtil.respondOk(res,null, 'Hello World')
-  // res.send('Hello World!!');
+const helloWorld = async (req, res) => {
+  res.status(200).send('Hello World!!');
 };
 
-const status = async(req,res) => {
-  const envName = process.env.ENV_NAME;
-  const message = `Environment '${envName}' running on port: ${port}`;
-  res.send(message);
+const status = async (req, res) => {
+  res.status(200).send(`Environment '${envName}' running on port: ${port}`);
 };
 
-const error = async(req,res) => {
-  res.status(400);
-  res.send('error');
+const error = async (req, res) => {
+  res.status(400).send('400 Bad Request - On required request body or parameter');
 };
 
-module.exports = {helloWorld, status, error};
+module.exports = { helloWorld, status, error };
