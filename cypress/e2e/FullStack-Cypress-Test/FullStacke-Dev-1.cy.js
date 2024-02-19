@@ -187,9 +187,86 @@ describe('FullStack Dev-1 Automated Grading', () => {
     /// need a specific color to be required ////
     cy.visit('http://localhost:3004/residential.html')
   });
-  it.only('Agent Table 5 - Table is sortable by name/rating and fee', () => {
-    cy.visit('http://localhost:3004/residential.html')
+  it('Agent Table 5 - Table is sortable by name', () => {
+    // Visit the page containing the agent table
+    cy.visit('http://localhost:3004/residential.html');
+
+    // Click on the Full Name button once to sort in ascending order
+    cy.get('#full_name').click();
+
+    // Get the list of names from the table
+    cy.get('#agent_table_body')
+      .find('tr')
+      .then(rows => {
+        const names = [];
+        rows.each((index, row) => {
+          // Assuming the full name is contained within the second <td> of each row
+          const fullName = Cypress.$(row).find('td').eq(1).text();
+          names.push(fullName.trim()); // Trim to remove leading/trailing spaces
+        });
+
+        // Log out the actual and expected arrays for debugging
+        cy.log('Actual names:', names);
+        const sortedNames = [...names].sort();
+        cy.log('Expected sorted names:', sortedNames);
+
+        // Check if the names are sorted in ascending order
+        expect(names).to.deep.equal(sortedNames);
+      });
   });
+
+  it.only('Agent Table 5 - Table is sortable by rating', () => {
+    /// need a specific color to be required ////
+    cy.visit('http://localhost:3004/residential.html')    // Click on the Rating button once to sort in ascending order
+    cy.get('#rating').click();
+
+    // Get the list of ratings from the table
+    cy.get('#agent_table_body')
+      .find('tr')
+      .then(rows => {
+        const ratings = [];
+        rows.each((index, row) => {
+          // Assuming the rating is contained within the fourth <td> of each row
+          const rating = Cypress.$(row).find('td').eq(3).text();
+          ratings.push(parseFloat(rating.trim())); // Parse rating and remove leading/trailing spaces
+        });
+
+        // Log out the actual and expected arrays for debugging
+        cy.log('Actual ratings:', ratings);
+        const sortedRatings = [...ratings].sort((a, b) => a - b);
+        cy.log('Expected sorted ratings:', sortedRatings);
+
+        // Check if the ratings are sorted in ascending order
+        expect(ratings).to.deep.equal(sortedRatings);
+      });
+  });
+  it('Agent Table 5 - Table is sortable by fee', () => {
+    /// need a specific color to be required ////
+    cy.visit('http://localhost:3004/residential.html')
+    // Click on the Fee button once to sort in ascending order
+    cy.get('#fee').click();
+
+    // Get the list of fees from the table
+    cy.get('#agent_table_body')
+      .find('tr')
+      .then(rows => {
+        const fees = [];
+        rows.each((index, row) => {
+          // Assuming the fee is contained within the third <td> of each row
+          const fee = Cypress.$(row).find('td').eq(2).text();
+          fees.push(parseFloat(fee.trim().replace('$', ''))); // Parse fee and remove leading/trailing spaces and '$' sign
+        });
+
+        // Log out the actual and expected arrays for debugging
+        cy.log('Actual fees:', fees);
+        const sortedFees = [...fees].sort((a, b) => a - b);
+        cy.log('Expected sorted fees:', sortedFees);
+
+        // Check if the fees are sorted in ascending order
+        expect(fees).to.deep.equal(sortedFees);
+      });
+  });
+
   it('Agent Table 6 - Table is sortable by region', () => {
     cy.visit('http://localhost:3004/residential.html')
 

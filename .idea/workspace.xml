@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="starting day">
+    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="agent table 6 done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" afterDir="false" />
     </list>
@@ -99,7 +99,7 @@
       <workItem from="1707924024398" duration="12835000" />
       <workItem from="1708001965981" duration="17334000" />
       <workItem from="1708085313093" duration="7727000" />
-      <workItem from="1708348108040" duration="3869000" />
+      <workItem from="1708348108040" duration="5469000" />
     </task>
     <task id="LOCAL-00001" summary="initial set up +calculation.js">
       <created>1707486095448</created>
@@ -304,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708351144584</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="agent table 6 done">
+      <created>1708363119911</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1708363119911</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +329,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cal method" />
     <MESSAGE value="validator install" />
     <MESSAGE value=".gitignore" />
     <MESSAGE value="data update" />
@@ -347,6 +353,7 @@
     <MESSAGE value="cypress test agent table" />
     <MESSAGE value="mocha test" />
     <MESSAGE value="starting day" />
-    <option name="LAST_COMMIT_MESSAGE" value="starting day" />
+    <MESSAGE value="agent table 6 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="agent table 6 done" />
   </component>
 </project>
