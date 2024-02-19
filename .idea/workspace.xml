@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="agent table 5 done">
+    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="agent table 4 done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" afterDir="false" />
     </list>
@@ -99,7 +99,7 @@
       <workItem from="1707924024398" duration="12835000" />
       <workItem from="1708001965981" duration="17334000" />
       <workItem from="1708085313093" duration="7727000" />
-      <workItem from="1708348108040" duration="7581000" />
+      <workItem from="1708348108040" duration="8088000" />
     </task>
     <task id="LOCAL-00001" summary="initial set up +calculation.js">
       <created>1707486095448</created>
@@ -318,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708364732487</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="agent table 4 done">
+      <created>1708370967514</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1708370967514</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +343,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value=".gitignore" />
     <MESSAGE value="data update" />
     <MESSAGE value="validator" />
     <MESSAGE value="working contact form" />
@@ -361,6 +367,7 @@
     <MESSAGE value="starting day" />
     <MESSAGE value="agent table 6 done" />
     <MESSAGE value="agent table 5 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="agent table 5 done" />
+    <MESSAGE value="agent table 4 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="agent table 4 done" />
   </component>
 </project>

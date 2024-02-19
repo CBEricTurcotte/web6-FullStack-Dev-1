@@ -132,7 +132,7 @@ describe('FullStack Dev-1 Automated Grading', () => {
   // Contact Endpoint //
   ////////////////////////
 
-  it.skip('Contact Endpoint 1 - The endpoint has been update to accept all fields from the form', () => {
+  it('Contact Endpoint 1 - The endpoint has been update to accept all fields from the form', () => {
     // Define form data
     const formData = {
       fullname: 'John Doe',
@@ -160,9 +160,35 @@ describe('FullStack Dev-1 Automated Grading', () => {
   // it.skip('Contact Endpoint 2 - All the fields from the form are persisting in MongoDB - except attachment', () => {
   //   // Define form data
   // });
-  // it.skip('Agent Table 1 - Residential landing page a table displays agents data pulled from MongoDB', () => {
-  //   // Define form data
-  // });
+
+
+  /////////////////////////
+  // Agent Table //
+  ////////////////////////
+
+  it('Agent Table 1 - Residential landing page a table displays agents data pulled from MongoDB', () => {
+    // Send a request to the /agents endpoint
+    cy.request('/agents').then((response) => {
+      // Verify that the response status is 200
+      expect(response.status).to.equal(200);
+
+      // Verify that the response body is not empty and is an object
+      expect(response.body).to.not.be.empty;
+      expect(response.body).to.be.an('object');
+
+      // Assuming the response body is an object with a 'data' property
+      // Check if the 'data' property is an array
+      expect(response.body.data).to.be.an('array').that.is.not.empty;
+
+      // Check if each agent object in the array has a 'last_name' property
+      response.body.data.forEach((agent) => {
+        expect(agent).to.have.property('last_name');
+      });
+
+      // Optionally, you can add more assertions based on the structure of your response data
+    });
+  });
+
   it('Agent Table 2 - Information displayed are Full name-rating and fee', () => {
     cy.visit('http://localhost:3004/residential.html')
     cy.get('#agent_table_head').should('be.visible')
@@ -183,7 +209,7 @@ describe('FullStack Dev-1 Automated Grading', () => {
       expect(text).to.match(/^\$?(\d{1,3})(,\d{3})*(\.\d{2})?$/)
     });
   });
-  it.only('Agent Table 4 - should have green color when rating is 100', () => {
+  it('Agent Table 4 - should have green color when rating is 100', () => {
     /// need a specific color to be required ////
     cy.visit('http://localhost:3004/residential.html')   // Get the table row with rating 100
     // Get the table row with rating 100
@@ -192,7 +218,7 @@ describe('FullStack Dev-1 Automated Grading', () => {
       .should('have.class', 'rating-green');
   });
 
-  it.only('Agent Table 4 - should have blue color when rating is >= 90 but not 100', () => {
+  it('Agent Table 4 - should have blue color when rating is >= 90 but not 100', () => {
     // Visit the page containing the agent table
     cy.visit('http://localhost:3004/residential.html');
 
@@ -207,7 +233,7 @@ describe('FullStack Dev-1 Automated Grading', () => {
       });
   });
 
-  it.only('Agent Table 4 - should have purple color for the rest of ratings', () => {
+  it('Agent Table 4 - should have purple color for the rest of ratings', () => {
     // Visit the page containing the agent table
     cy.visit('http://localhost:3004/residential.html');
 
