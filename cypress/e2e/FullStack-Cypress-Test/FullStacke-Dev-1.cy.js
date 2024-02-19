@@ -183,9 +183,43 @@ describe('FullStack Dev-1 Automated Grading', () => {
       expect(text).to.match(/^\$?(\d{1,3})(,\d{3})*(\.\d{2})?$/)
     });
   });
-  it.skip('Agent Table 4 - Color rating green/100 blue/90+ purple for the rest', () => {
+  it.only('Agent Table 4 - should have green color when rating is 100', () => {
     /// need a specific color to be required ////
-    cy.visit('http://localhost:3004/residential.html')
+    cy.visit('http://localhost:3004/residential.html')   // Get the table row with rating 100
+    // Get the table row with rating 100
+    cy.get('#agent_table_body')
+      .contains('tr', '100')
+      .should('have.class', 'rating-green');
+  });
+
+  it.only('Agent Table 4 - should have blue color when rating is >= 90 but not 100', () => {
+    // Visit the page containing the agent table
+    cy.visit('http://localhost:3004/residential.html');
+
+    // Get the table rows with rating 90 or above but not equal to 100
+    cy.get('#agent_table_body')
+      .find('tr')
+      .each(($row) => {
+        const rating = parseInt($row.find('td').eq(3).text().trim());
+        if (rating >= 90 && rating !== 100) {
+          cy.wrap($row).should('have.class', 'rating-blue');
+        }
+      });
+  });
+
+  it.only('Agent Table 4 - should have purple color for the rest of ratings', () => {
+    // Visit the page containing the agent table
+    cy.visit('http://localhost:3004/residential.html');
+
+    // Get the table rows with ratings other than 100 or >= 90
+    cy.get('#agent_table_body')
+      .find('tr')
+      .each(($row) => {
+        const rating = parseInt($row.find('td').eq(3).text().trim());
+        if (rating !== 100 && rating < 90) {
+          cy.wrap($row).should('have.class', 'rating-purple');
+        }
+      });
   });
   it('Agent Table 5 - Table is sortable by name', () => {
     // Visit the page containing the agent table
@@ -215,7 +249,7 @@ describe('FullStack Dev-1 Automated Grading', () => {
       });
   });
 
-  it.only('Agent Table 5 - Table is sortable by rating', () => {
+  it('Agent Table 5 - Table is sortable by rating', () => {
     /// need a specific color to be required ////
     cy.visit('http://localhost:3004/residential.html')    // Click on the Rating button once to sort in ascending order
     cy.get('#rating').click();
