@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="mocha test">
+    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="starting day">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +99,7 @@
       <workItem from="1707924024398" duration="12835000" />
       <workItem from="1708001965981" duration="17334000" />
       <workItem from="1708085313093" duration="7727000" />
-      <workItem from="1708348108040" duration="2027000" />
+      <workItem from="1708348108040" duration="3869000" />
     </task>
     <task id="LOCAL-00001" summary="initial set up +calculation.js">
       <created>1707486095448</created>
@@ -296,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708097799491</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="starting day">
+      <created>1708351144584</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1708351144584</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +322,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial set up +calculation.js" />
     <MESSAGE value="cal method" />
     <MESSAGE value="validator install" />
     <MESSAGE value=".gitignore" />
@@ -339,6 +346,7 @@
     <MESSAGE value="delete contact task" />
     <MESSAGE value="cypress test agent table" />
     <MESSAGE value="mocha test" />
-    <option name="LAST_COMMIT_MESSAGE" value="mocha test" />
+    <MESSAGE value="starting day" />
+    <option name="LAST_COMMIT_MESSAGE" value="starting day" />
   </component>
 </project>

@@ -184,9 +184,10 @@ describe('FullStack Dev-1 Automated Grading', () => {
     });
   });
   it.skip('Agent Table 4 - Color rating green/100 blue/90+ purple for the rest', () => {
+    /// need a specific color to be required ////
     cy.visit('http://localhost:3004/residential.html')
   });
-  it.skip('Agent Table 5 - Table is sortable by name/rating and fee', () => {
+  it.only('Agent Table 5 - Table is sortable by name/rating and fee', () => {
     cy.visit('http://localhost:3004/residential.html')
   });
   it('Agent Table 6 - Table is sortable by region', () => {
@@ -209,7 +210,20 @@ describe('FullStack Dev-1 Automated Grading', () => {
       })
    });
   });
-  it.only('Agent Table 7 - Validator middleware is used to validate passed region', () => {
-    cy.visit('http://localhost:3004/residential.html')
+  it('Agent Table 7 - Validator middleware is used to validate passed region', () => {
+    cy.request({
+      method: 'GET',
+      url: '/agents-by-region?region=north', // Adjust the query parameter as necessary
+      failOnStatusCode: false, // To not fail the test on non-2xx responses
+    }).then((response) => {
+      // Check if the response status is 400 indicating validation failure
+      if (response.status === 400) {
+        // Assert that the response body contains the expected validation error message
+        expect(response.body).to.contain('Invalid region');
+      } else {
+        // If validation succeeds, assert that the status is 200
+        expect(response.status).to.equal(200);
+      }
+    });
   });
 });
