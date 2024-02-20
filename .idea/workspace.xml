@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="cypress test">
+    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="remove ToLowerCase method causing issue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/public/public.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/public/public.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/public.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/public.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/middleware/base-middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/middleware/base-middleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/resources/calculation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/resources/calculation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/resources/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/resources/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
