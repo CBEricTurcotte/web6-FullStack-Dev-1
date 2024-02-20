@@ -10,7 +10,9 @@
 //   const INSTALL_PERCENT_FEE = installPercentFees[tier];
 //   return Math.round(numElevators * UNIT_PRICE * ((INSTALL_PERCENT_FEE / 100) + 1));
 // };
-const { unitPrices, installPercentFees } = require('../../shared/resources/data');
+// const { unitPrices, installPercentFees } = require('../../shared/resources/data');
+
+const data = require('./data');
 
 const calcResidentialElev = (floors, apts) => {
   return Math.ceil(apts / floors / 6) * Math.ceil(floors / 20);
@@ -27,9 +29,9 @@ const calcIndustrialElev = (elevatorsNeeded) => {
 }
 
 const calcInstallFee = (numElevators, tier) => {
-  const unitPrice = unitPrices[tier];
-  const installPercentFee = installPercentFees[tier];
-  return Math.round(numElevators * unitPrice * ((installPercentFee / 100) + 1));
+  const unitPrice = data.unitPrices[tier];
+  const installPercentFees = data.installPercentFees[tier];
+  return Math.round(numElevators * unitPrice * ((installPercentFees / 100) + 1));
 };
 
 module.exports = { calcResidentialElev, calcCommercialElev, calcIndustrialElev, calcInstallFee };

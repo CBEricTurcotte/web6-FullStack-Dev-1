@@ -28,9 +28,9 @@ const installPercentFees = {
   premium: 15,
   excelium: 20,
 };
-const FORMATTER = new Intl.NumberFormat("en-US", {
+const formatter = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
 });
 
-module.exports = { agents, unitPrices, installPercentFees, FORMATTER };
+module.exports = { agents, unitPrices, installPercentFees, formatter };
