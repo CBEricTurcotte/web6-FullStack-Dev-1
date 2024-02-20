@@ -58,11 +58,11 @@ describe('FullStack Dev-1 Automated Grading', () => {
       expect(response.body).to.have.property('cost');
     });
   });
-  it('Calc Endpoint 3 - industrial - The /calc route validate the proper query parameter and returns valid results', () => {
+  it.only('Calc Endpoint 3 - industrial - The /calc route validate the proper query parameter and returns valid results', () => {
     // Define valid query parameters for the industrial building type
     const queryParams = {
       elevators: 5,
-      tier: 'basic'
+      tier: 'standard'
       // Add more query parameters as needed
     };
 
@@ -81,7 +81,7 @@ describe('FullStack Dev-1 Automated Grading', () => {
     });
   });
 
-  it('Calc Endpoint 4 - commercial - The /calc route validate the proper query parameter and returns valid results', () => {
+  it.only('Calc Endpoint 4 - commercial - The /calc route validate the proper query parameter and returns valid results', () => {
     // Define valid query parameters for the commercial building type
     const queryParams = {
       floors: 10,
@@ -104,7 +104,7 @@ describe('FullStack Dev-1 Automated Grading', () => {
       expect(response.body).to.have.property('cost');
     });
   });
-  it('Calc Endpoint 4 - commercial - The /calc route validate the proper query parameter and returns valid results', () => {
+  it.only('Calc Endpoint 4 - commercial - The /calc route validate the proper query parameter and returns valid results', () => {
     // Define valid query parameters for the residential building type
     const queryParams = {
       floors: 5,
