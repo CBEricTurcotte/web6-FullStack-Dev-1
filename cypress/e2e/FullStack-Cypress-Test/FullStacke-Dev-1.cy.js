@@ -153,9 +153,13 @@ describe('FullStack Dev-1 Automated Grading', () => {
     }).then(response => {
       // Assert that the response status is 200 (assuming success)
       expect(response.status).to.equal(200);
+
+      // Delete the contact form data using the task
+      cy.task('deleteContactDataFromMongoDB').then(taskResponse => {
+        // Ensure that the task was successful
+        expect(taskResponse.success).to.be.true;
+      });
     });
-    // Delete the contact form data using the task
-    cy.task('deleteContactDataFromMongoDB');
   });
 
 
