@@ -102,13 +102,6 @@
       <workItem from="1708433922445" duration="8167000" />
       <workItem from="1708607824775" duration="8316000" />
     </task>
-    <task id="LOCAL-00003" summary="cal method">
-      <created>1707493137451</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1707493137451</updated>
-    </task>
     <task id="LOCAL-00004" summary="validator install">
       <created>1707745124392</created>
       <option name="number" value="00004" />
@@ -445,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708622118987</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="testing action">
+      <created>1708622210520</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1708622210520</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
