@@ -132,7 +132,7 @@ describe('FullStack Dev-1 Automated Grading', () => {
   // Contact Endpoint //
   ////////////////////////
 
-  it.only('Contact Endpoint 1 - The endpoint has been update to accept all fields from the form', () => {
+  it.only('Contact Endpoint 1 - The endpoint has been updated to accept all fields from the form', () => {
     // Define form data
     const formData = {
       fullname: 'John Doe',
@@ -154,14 +154,13 @@ describe('FullStack Dev-1 Automated Grading', () => {
       // Assert that the response status is 200 (assuming success)
       expect(response.status).to.equal(200);
 
-      // Delete the contact form data using the task
-      cy.task('deleteContactDataFromMongoDB').then(taskResponse => {
+      // Delete the contact by fullname using the Cypress task
+      cy.task('deleteContactByFullnameFromMongoDB', formData.fullname).then(taskResponse => {
         // Ensure that the task was successful
         expect(taskResponse.success).to.be.true;
       });
     });
   });
-
 
   // it.skip('Contact Endpoint 2 - All the fields from the form are persisting in MongoDB - except attachment', () => {
   //   // Define form data
