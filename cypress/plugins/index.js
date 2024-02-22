@@ -68,13 +68,13 @@
 // cypress/plugins/index.js
 import './commands';
 
-const { openMongoConnection, Contact } = require('/src/shared/db/mongodb/mongo-manager'); // Adjust the path accordingly
-
-module.exports = (on, config) => {
-  on('task', {
-    deleteContactDataFromMongoDB: () => {
-      return openMongoConnection() // Ensure MongoDB connection is open
-        .then(() => Contact.deleteMany({}));
-    },
-  });
-};
+// const { openMongoConnection, Contact } = require('/src/shared/db/mongodb/mongo-manager'); // Adjust the path accordingly
+//
+// module.exports = (on, config) => {
+//   on('task', {
+//     deleteContactDataFromMongoDB: () => {
+//       return openMongoConnection() // Ensure MongoDB connection is open
+//         .then(() => Contact.deleteMany({}));
+//     },
+//   });
+// };

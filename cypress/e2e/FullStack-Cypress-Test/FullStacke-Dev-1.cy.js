@@ -132,7 +132,7 @@ describe('FullStack Dev-1 Automated Grading', () => {
   // Contact Endpoint //
   ////////////////////////
 
-  it.only('Contact Endpoint 1 - The endpoint has been updated to accept all fields from the form', () => {
+  it('Contact Endpoint 1 - The endpoint has been updated to accept all fields from the form', () => {
     // Define form data
     const formData = {
       fullname: 'John Doe',
@@ -162,7 +162,7 @@ describe('FullStack Dev-1 Automated Grading', () => {
     });
   });
 
-  it.only('Contact Endpoint 2 - All the fields from the form are persisting in MongoDB - except attachment', () => {
+  it('Contact Endpoint 2 - All the fields from the form are persisting in MongoDB - except attachment', () => {
 // Define form data
     const formData = {
       fullname: 'John Doe',
