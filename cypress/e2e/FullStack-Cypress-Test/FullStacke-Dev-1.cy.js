@@ -7,7 +7,7 @@ describe('FullStack Dev-1 Automated Grading', () => {
   ////////////////////
   // Calc Endpoint //
   ///////////////////
-
+//
   it('Calc Endpoint 1 - The /calc-residential route has been rename to /calc', () => {
     cy.request({
       method: 'OPTIONS',
