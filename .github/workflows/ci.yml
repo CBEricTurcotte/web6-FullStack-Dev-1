@@ -5,7 +5,7 @@ on:
     branches:
       - "dev"
       - "!main"
-      - "cypress_Dev"
+      - "cypress-dev"
 
 jobs:
   cypress-run:
