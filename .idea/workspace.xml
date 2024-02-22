@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" afterDir="false" />
-    </list>
+    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="testing action" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -439,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708621093445</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="testing action">
+      <created>1708621877022</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1708621877022</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +461,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="css add" />
     <MESSAGE value="gitignore" />
     <MESSAGE value="pre-cypress commit" />
     <MESSAGE value="cypress install + library" />
@@ -482,6 +485,7 @@
     <MESSAGE value="clean up project" />
     <MESSAGE value="yml add" />
     <MESSAGE value="test yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="test yml" />
+    <MESSAGE value="testing action" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing action" />
   </component>
 </project>
