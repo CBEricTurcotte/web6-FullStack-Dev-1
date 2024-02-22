@@ -132,7 +132,7 @@ describe('FullStack Dev-1 Automated Grading', () => {
   // Contact Endpoint //
   ////////////////////////
 
-  it.only('Contact Endpoint 1 - The endpoint has been updated to accept all fields from the form', () => {
+  it('Contact Endpoint 1 - The endpoint has been updated to accept all fields from the form', () => {
     // Define form data
     const formData = {
       fullname: 'John Doe',
@@ -162,9 +162,40 @@ describe('FullStack Dev-1 Automated Grading', () => {
     });
   });
 
-  // it.skip('Contact Endpoint 2 - All the fields from the form are persisting in MongoDB - except attachment', () => {
-  //   // Define form data
-  // });
+  it.only('Contact Endpoint 2 - All the fields from the form are persisting in MongoDB - except attachment', () => {
+// Define form data
+    const formData = {
+      fullname: 'John Doe',
+      email: 'johndoe@example.com',
+      phone: '1234567890',
+      company_name: 'Example Company',
+      project_name: 'Example Project',
+      project_desc: 'This is an example project description.',
+      department: 'commercial',
+      message: 'This is a test message.'
+    };
+
+    // Send a POST request to the /contact endpoint with form data
+    cy.request({
+      method: 'POST',
+      url: '/contact',
+      body: formData
+    }).then(response => {
+      // Assert that the response status is 200
+      expect(response.status).to.equal(200);
+
+      // Validate that all fields are persisted in MongoDB
+      cy.task('verifyContactDataInMongoDB', formData).then(verificationResult => {
+        expect(verificationResult.success).to.be.true;
+      });
+
+      // Delete the contact form data using the task
+      cy.task('deleteContactByFullnameFromMongoDB', formData.fullname).then(taskResponse => {
+        // Ensure that the task was successful
+        expect(taskResponse.success).to.be.true;
+      });
+    });
+  });
 
 
   /////////////////////////

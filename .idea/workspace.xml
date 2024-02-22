@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="working mongo">
-      <change afterPath="$PROJECT_DIR$/cypress/support/index.js" afterDir="false" />
+    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="working delete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/plugins/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/plugins/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/db/mongodb/mongo-manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/db/mongodb/mongo-manager.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +101,7 @@
       <workItem from="1708085313093" duration="7727000" />
       <workItem from="1708348108040" duration="8736000" />
       <workItem from="1708433922445" duration="8167000" />
-      <workItem from="1708607824775" duration="5247000" />
+      <workItem from="1708607824775" duration="6404000" />
     </task>
     <task id="LOCAL-00001" summary="initial set up +calculation.js">
       <created>1707486095448</created>
@@ -351,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708609138353</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="working delete">
+      <created>1708614699421</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1708614699421</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +373,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="modified index" />
     <MESSAGE value="update app.js + cors install" />
     <MESSAGE value="update calc" />
     <MESSAGE value="residential html" />
@@ -394,6 +397,7 @@
     <MESSAGE value="agent table 1 done" />
     <MESSAGE value="cypress test" />
     <MESSAGE value="working mongo" />
-    <option name="LAST_COMMIT_MESSAGE" value="working mongo" />
+    <MESSAGE value="working delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="working delete" />
   </component>
 </project>
