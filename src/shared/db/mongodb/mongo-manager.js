@@ -1,18 +1,24 @@
-const mongoose = require('mongoose')
-require('dotenv').config()
+require('dotenv').config(); // Load environment variables from .env file
 
+const mongoose = require('mongoose');
+// const Agent = require('./agent.Schema'); // Update the path accordingly
+// const Region = require('./region.Schema'); // Update the path accordingly
 
-const openMongoConnection = () => {
-    const db = mongoose.connection;
-    db.on('error', console.error.bind(console, 'connection error:'));
-    db.once('open', function callback () {
-        console.log("connected to MongoDB");
+const openMongoConnection = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URI, {
+      useNewUrlParser: false, // useNewUrlParser is deprecated
+      useUnifiedTopology: false, // useUnifiedTopology is deprecated
+      serverSelectionTimeoutMS: 5000, // How long the MongoDB driver waits for a connection to be established
     });
-    mongoose.connect(process.env.MONGO_URI);
+
+    console.log('Connected to MongoDB');
+  } catch (error) {
+    console.error('Error connecting to MongoDB:', error.message);
+    // Handle the error appropriately (e.g., throw an error, exit the application)
+  }
 };
 
-mongoose.set('strictQuery', true)
-
+// Export models and connection function
 module.exports = {openMongoConnection};
-
 
