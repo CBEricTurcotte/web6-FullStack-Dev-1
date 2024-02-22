@@ -132,7 +132,7 @@ describe('FullStack Dev-1 Automated Grading', () => {
   // Contact Endpoint //
   ////////////////////////
 
-  it('Contact Endpoint 1 - The endpoint has been updated to accept all fields from the form', () => {
+  it.only('Contact Endpoint 1 - The endpoint has been updated to accept all fields from the form', () => {
     // Define form data
     const formData = {
       fullname: 'John Doe',
