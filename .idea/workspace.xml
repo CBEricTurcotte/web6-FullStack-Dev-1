@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="yml add" />
+    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="yml add">
+      <change beforePath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +100,7 @@
       <workItem from="1708085313093" duration="7727000" />
       <workItem from="1708348108040" duration="8736000" />
       <workItem from="1708433922445" duration="8167000" />
-      <workItem from="1708607824775" duration="8219000" />
+      <workItem from="1708607824775" duration="8316000" />
     </task>
     <task id="LOCAL-00001" summary="initial set up +calculation.js">
       <created>1707486095448</created>
@@ -422,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708616835025</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="yml add">
+      <created>1708617106339</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1708617106339</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
