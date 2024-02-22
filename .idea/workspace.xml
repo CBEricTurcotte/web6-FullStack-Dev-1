@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="clean up project">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+    <list default="true" id="f60f7767-f9cd-4aaa-843b-479c2f600742" name="Changes" comment="yml add">
+      <change beforePath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/FullStack-Cypress-Test/FullStacke-Dev-1.cy.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +100,7 @@
       <workItem from="1708085313093" duration="7727000" />
       <workItem from="1708348108040" duration="8736000" />
       <workItem from="1708433922445" duration="8167000" />
-      <workItem from="1708607824775" duration="7763000" />
+      <workItem from="1708607824775" duration="7843000" />
     </task>
     <task id="LOCAL-00001" summary="initial set up +calculation.js">
       <created>1707486095448</created>
@@ -396,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708616492384</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="yml add">
+      <created>1708616663216</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1708616663216</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,7 +421,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="residential fix" />
     <MESSAGE value="region fix" />
     <MESSAGE value="css add" />
     <MESSAGE value="gitignore" />
@@ -439,6 +445,7 @@
     <MESSAGE value="clean up" />
     <MESSAGE value="clean up routes" />
     <MESSAGE value="clean up project" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up project" />
+    <MESSAGE value="yml add" />
+    <option name="LAST_COMMIT_MESSAGE" value="yml add" />
   </component>
 </project>
