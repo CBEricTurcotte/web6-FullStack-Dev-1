@@ -1,8 +1,5 @@
 describe('FullStack Dev-1 Automated Grading', () => {
-  // beforeEach(() => {
-  //   // Before each test, delete contact data from MongoDB using the custom Cypress task
-  //   cy.task('deleteContactData');
-  // });
+
   it('Log on Local', () => {
     cy.visit('/')
   })
